@@ -1,0 +1,58 @@
+C51 COMPILER V7.00 Beta 6  MULTI                                                           09/30/2023 20:12:42 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE MULTI
+OBJECT MODULE PLACED IN multi.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE multi.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned int a[]={0x12,0x34},b[]={0x12,0x34},carry;
+   5   1      unsigned int c=0,d=0,e=0,f=0;
+   6   1      unsigned int c1,c2,d1,d2,e1,e2,f1,f2;
+   7   1      unsigned char result[10]=0;
+   8   1      c=a[0]*b[0];
+   9   1      d=a[0]*b[1];
+  10   1      e=a[1]*b[0];
+  11   1      f=a[1]*b[1];
+  12   1      c1=c&0x00ff;
+  13   1      c2=((c&0xff00)>>8);
+  14   1      d1=d&0x00ff;
+  15   1      d2=((d&0xff00)>>8);
+  16   1      e1=e&0x00ff;
+  17   1      e2=((e&0xff00)>>8);
+  18   1      f1=f&0x00ff;
+  19   1      f2=((f&0xff00)>>8);
+  20   1      result[0]=c1;
+  21   1      result[1]=c2+d1+e1;
+  22   1      if(CY==1) carry=1;
+  23   1      else carry=0;
+  24   1      CY=0;
+  25   1      result[2]=carry+d2+e2+f1;
+  26   1      if(CY==1) carry=1;
+  27   1      else carry=0;
+  28   1      CY=0;
+  29   1      result[3]=carry+f2;
+  30   1      P0=result[0];
+  31   1      P1=result[1];
+  32   1      P2=result[2];
+  33   1      P3=result[3];
+  34   1      while(1);
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    247    ----
+   CONSTANT SIZE    =     18    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      32
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

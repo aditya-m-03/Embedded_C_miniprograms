@@ -1,0 +1,37 @@
+C51 COMPILER V7.00 Beta 6  EXP4                                                            08/29/2023 11:59:11 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP4
+OBJECT MODULE PLACED IN exp4.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp4.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          unsigned char sqr[]={0,1,4,9,16,25,36,49,64,81,100};
+   3          unsigned int sqrt(unsigned int i)
+   4          {
+   5   1       unsigned int sqroot;
+   6   1       sqroot=sqr[i]; 
+   7   1      return sqroot;
+   8   1      }
+   9          void main()
+  10          {
+  11   1       unsigned int n=8,square;
+  12   1       square=sqrt(n);
+  13   1       P1=square;
+  14   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     19    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     11    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

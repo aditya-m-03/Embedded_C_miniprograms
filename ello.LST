@@ -1,0 +1,48 @@
+C51 COMPILER V7.00 Beta 6  ELLO                                                            09/25/2023 10:50:46 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE ELLO
+OBJECT MODULE PLACED IN ello.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ello.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void sertx(unsigned char);
+   3          void main()
+   4          {
+   5   1      TMOD=0x20;
+   6   1      TH1=0xFD;
+   7   1      SCON=0x50;
+   8   1      TR1=1;
+   9   1      sertx('H');
+  10   1      sertx('E');
+  11   1      sertx('L');
+  12   1      sertx('L');
+  13   1      sertx('O');
+  14   1      sertx('W');
+  15   1      sertx('O');
+  16   1      sertx('R');
+  17   1      sertx('L');
+  18   1      sertx('D');
+  19   1      }
+  20          void sertx (unsigned char x)
+  21          {
+  22   1      SBUF=x;
+  23   1      while(TI==0);
+  24   1      TI=0;
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     69    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

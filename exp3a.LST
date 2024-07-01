@@ -1,0 +1,33 @@
+C51 COMPILER V7.00 Beta 6  EXP3A                                                           09/29/2023 22:35:23 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP3A
+OBJECT MODULE PLACED IN exp3a.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp3a.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned int i=1,j=9,k=1;
+   5   1      for(i=1;i<=j;i++)
+   6   1      k=k*i;
+   7   1      P0=k;
+   8   1      P1=k>>8;
+   9   1      P2=k>>16;
+  10   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

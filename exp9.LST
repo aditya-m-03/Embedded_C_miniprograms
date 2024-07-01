@@ -1,0 +1,39 @@
+C51 COMPILER V7.00 Beta 6  EXP9                                                            09/29/2023 22:56:29 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP9
+OBJECT MODULE PLACED IN exp9.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp9.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned long int a[]={0x04624632,0x0f457811,0xff820613,0xb6123458};
+   5   1      unsigned char i,neg=0,pos=0;
+   6   1      for(i=0;i<=3;i++)
+   7   1      {
+   8   2       a[i]=a[i]<<1;
+   9   2       {
+  10   3       if(CY==1)
+  11   3        neg=neg+1;
+  12   3       else
+  13   3        pos=pos+1;
+  14   3       }
+  15   2      }
+  16   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      19
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

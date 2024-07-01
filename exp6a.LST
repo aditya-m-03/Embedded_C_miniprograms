@@ -1,0 +1,44 @@
+C51 COMPILER V7.00 Beta 6  EXP6A                                                           08/29/2023 11:54:08 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP6A
+OBJECT MODULE PLACED IN exp6a.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp6a.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned char a[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32}
+             -;
+   5   1      unsigned char i,largest=1,smallest=32;
+   6   1      for(i=0;i<=32;i++)
+   7   1      {
+   8   2       if(largest<a[i])
+   9   2       {
+  10   3        largest=a[i];
+  11   3       }
+  12   2       if(smallest>a[i])
+  13   2       {
+  14   3        smallest=a[i];
+  15   3       }
+  16   2      }
+  17   1      P0=largest;
+  18   1      P1=smallest;
+  19   1      }
+  20          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =     32    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      32
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

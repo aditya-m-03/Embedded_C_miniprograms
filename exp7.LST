@@ -1,0 +1,48 @@
+C51 COMPILER V7.00 Beta 6  EXP7                                                            09/29/2023 22:37:18 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP7
+OBJECT MODULE PLACED IN exp7.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp7.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          sbit carry=PSW^7;
+   3          void main()
+   4          {
+   5   1      unsigned char a[]={0xff,0x00};
+   6   1      unsigned char i,one=0,zero=0;
+   7   1      for(i=0;i<8;i++)
+   8   1      {
+   9   2       a[0]=a[0]>>1;
+  10   2       if(carry==1)
+  11   2        one=one+1;
+  12   2       else
+  13   2        zero=zero+1;
+  14   2      }
+  15   1      for(i=0;i<8;i++)
+  16   1      {
+  17   2       a[1]=a[1]>>1;
+  18   2       if(carry==1)
+  19   2        one=one+1;
+  20   2       else
+  21   2        zero=zero+1;
+  22   2      }
+  23   1      P0=one;
+  24   1      P1=zero;
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     64    ----
+   CONSTANT SIZE    =      2    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

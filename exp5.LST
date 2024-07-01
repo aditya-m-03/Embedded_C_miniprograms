@@ -1,0 +1,49 @@
+C51 COMPILER V7.00 Beta 6  EXP5                                                            09/26/2023 14:59:25 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP5
+OBJECT MODULE PLACED IN exp5.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp5.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          sbit carry=PSW^7;
+   3          void main()
+   4          {
+   5   1      unsigned int a1[]={0xffff,0xffff};
+   6   1      unsigned int a2[]={0xabcd,0xcdef};
+   7   1      unsigned long int sum1=0;
+   8   1      unsigned long int sum2=0;
+   9   1      unsigned char carry1;
+  10   1      unsigned int *p;
+  11   1      sum1=a1[0]+a2[0];
+  12   1      if(carry==1)
+  13   1      {
+  14   2       carry1=1;
+  15   2      }
+  16   1      else
+  17   1      {
+  18   2       carry1=0;
+  19   2      }
+  20   1      sum2=a1[1]+a2[1]+carry1;
+  21   1      p=&sum1;
+*** WARNING C182 IN LINE 21 OF EXP5.C: pointer to different objects
+  22   1      *p=sum1;
+  23   1      p=p+1;
+  24   1      *p=sum2;
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    141    ----
+   CONSTANT SIZE    =      8    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      17
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

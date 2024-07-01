@@ -1,0 +1,38 @@
+C51 COMPILER V7.00 Beta 6  EXPERIMENT4                                                     09/25/2023 10:43:09 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXPERIMENT4
+OBJECT MODULE PLACED IN experiment4.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE experiment4.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void sertx(unsigned char);
+   3          void main()
+   4          {
+   5   1      TMOD=0x20;
+   6   1      TH1=0xFD;
+   7   1      SCON=0x50;
+   8   1      TR1=1;
+   9   1      sertx('H');
+  10   1      sertx('E');
+  11   1      sertx('L');
+  12   1      sertx('L');
+  13   1      sertx('O');
+  14   1      sertx('');
+*** ERROR C101 IN LINE 14 OF EXPERIMENT4.C: '''': invalid character constant
+  15   1      sertx('W');
+  16   1      sertx('O');
+  17   1      sertx('R');
+  18   1      sertx('L');
+  19   1      sertx('D');
+  20   1      }
+  21          void sertx (unsigned char x)
+  22          {
+  23   1      SBUF=x;
+  24   1      while(TI==0);
+  25   1      TI=0;
+  26   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

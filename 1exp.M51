@@ -1,0 +1,164 @@
+BL51 BANKED LINKER/LOCATER V5.00                                                        09/25/2023  10:00:21  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 1exp.obj TO 1exp
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  1exp.obj (1EXP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LSTIDATA)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LSTXDATA)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LSTPDATA)
+
+
+LINK MAP OF MODULE:  1exp (1EXP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         _DATA_GROUP_
+            IDATA   001CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0134H     UNIT         ?C?LIB_CODE
+            CODE    0934H     00ADH     UNIT         ?PR?MAIN?1EXP
+            CODE    09E1H     000CH     UNIT         ?C_C51STARTUP
+            CODE    09EDH     0008H     UNIT         ?CO?1EXP
+
+
+
+OVERLAY MAP OF MODULE:   1exp (1EXP)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?1EXP
+
+?PR?MAIN?1EXP                  0008H    0014H
+  +--> ?CO?1EXP
+
+
+
+SYMBOL TABLE OF MODULE:  1exp (1EXP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        1EXP
+BL51 BANKED LINKER/LOCATER V5.00                                                      09/25/2023  10:00:21  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00B0H.4       PUBLIC        T0
+  B:00D0H.6       PUBLIC        AC
+  B:00B0H.5       PUBLIC        T1
+  B:00A8H.7       PUBLIC        EA
+  B:00B0H.7       PUBLIC        RD
+  B:00A8H.4       PUBLIC        ES
+  B:0098H.0       PUBLIC        RI
+  B:00B0H.2       PUBLIC        INT0
+  B:00D0H.7       PUBLIC        CY
+  B:0098H.1       PUBLIC        TI
+  B:00B0H.3       PUBLIC        INT1
+  B:00B8H.4       PUBLIC        PS
+  B:00D0H.2       PUBLIC        OV
+  C:0934H         PUBLIC        main
+  B:00B0H.6       PUBLIC        WR
+  B:0088H.1       PUBLIC        IE0
+  B:0088H.3       PUBLIC        IE1
+  C:09EDH         SYMBOL        _?ix1000
+  C:09F1H         SYMBOL        _?ix1001
+  B:00A8H.1       PUBLIC        ET0
+  B:00A8H.3       PUBLIC        ET1
+  B:0088H.5       PUBLIC        TF0
+  B:0088H.7       PUBLIC        TF1
+  B:0098H.2       PUBLIC        RB8
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:0098H.3       PUBLIC        TB8
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  B:00D0H.0       PUBLIC        P
+  B:0098H.7       PUBLIC        SM0
+  B:0098H.6       PUBLIC        SM1
+  B:0098H.5       PUBLIC        SM2
+  B:00B8H.1       PUBLIC        PT0
+  B:00B8H.3       PUBLIC        PT1
+  B:00D0H.3       PUBLIC        RS0
+  B:0088H.4       PUBLIC        TR0
+  B:00D0H.4       PUBLIC        RS1
+  B:0088H.6       PUBLIC        TR1
+  B:00B8H.0       PUBLIC        PX0
+  B:00B8H.2       PUBLIC        PX1
+  B:0098H.4       PUBLIC        REN
+  B:00B0H.0       PUBLIC        RXD
+  B:00B0H.1       PUBLIC        TXD
+  B:00D0H.5       PUBLIC        F0
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        a
+  D:000CH         SYMBOL        b
+  D:0010H         SYMBOL        sum1
+  D:0014H         SYMBOL        sum2
+  D:0018H         SYMBOL        carry
+  D:0019H         SYMBOL        p
+  -------         ENDDO         
+  C:0934H         LINE#         2
+  C:0934H         LINE#         3
+BL51 BANKED LINKER/LOCATER V5.00                                                      09/25/2023  10:00:21  PAGE 3
+
+
+  C:0934H         LINE#         4
+  C:095AH         LINE#         5
+  C:096BH         LINE#         8
+  C:097EH         LINE#         9
+  C:0981H         LINE#         10
+  C:0986H         LINE#         12
+  C:0989H         LINE#         13
+  C:09A5H         LINE#         14
+  C:09B0H         LINE#         15
+  C:09BBH         LINE#         16
+  C:09C6H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        1EXP
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?LSTPTR
+  C:08F6H         PUBLIC        ?C?LSTPTR
+  -------         ENDMOD        ?C?LSTPTR
+
+  -------         MODULE        ?C?LSTIDATA
+  C:0910H         PUBLIC        ?C?LSTIDATA
+  -------         ENDMOD        ?C?LSTIDATA
+
+  -------         MODULE        ?C?LSTXDATA
+  C:091CH         PUBLIC        ?C?LSTXDATA
+  -------         ENDMOD        ?C?LSTXDATA
+
+  -------         MODULE        ?C?LSTPDATA
+  C:0928H         PUBLIC        ?C?LSTPDATA
+  -------         ENDMOD        ?C?LSTPDATA
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00B7H BYTE ( 8%) *
+******************************************************************************
+
+Program Size: data=29.0 xdata=0 code=504
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

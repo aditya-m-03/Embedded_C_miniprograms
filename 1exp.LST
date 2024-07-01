@@ -1,0 +1,42 @@
+C51 COMPILER V7.00 Beta 6  1EXP                                                            09/29/2023 21:47:35 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE 1EXP
+OBJECT MODULE PLACED IN 1exp.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 1exp.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned int a[2]={0x1111,0x2222},b[2]={0x2222,0x1111};
+   5   1      unsigned long int sum1=0,sum2=0;
+   6   1      unsigned char carry;
+   7   1      unsigned long int *p;
+   8   1      sum1=a[0]+b[0];
+   9   1      if(CY==0)
+  10   1      carry=1;
+  11   1      else
+  12   1      carry=0;
+  13   1      sum2=a[1]+b[1]+carry;
+  14   1      p=&sum1;
+  15   1      *p=sum1;
+  16   1      p++;
+  17   1      *p++=sum2;
+  18   1      }
+  19          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    173    ----
+   CONSTANT SIZE    =      8    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      20
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

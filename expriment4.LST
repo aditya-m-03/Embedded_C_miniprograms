@@ -1,0 +1,12 @@
+C51 COMPILER V7.00 Beta 6  EXPRIMENT4                                                      09/25/2023 10:06:26 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXPRIMENT4
+OBJECT MODULE PLACED IN expriment4.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE expriment4.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+*** ERROR C318 OF expriment4.c: can't open file 'expriment4.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

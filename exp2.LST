@@ -1,0 +1,33 @@
+C51 COMPILER V7.00 Beta 6  EXP2                                                            08/29/2023 05:16:24 PAGE 1   
+
+
+C51 COMPILER V7.00 Beta 6, COMPILATION OF MODULE EXP2
+OBJECT MODULE PLACED IN exp2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE exp2.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1      unsigned int i,sum=0;
+   5   1      for(i=0;i<=10;i++)
+   6   1      {
+   7   2      sum=sum+i;
+   8   2      }
+   9   1      P0=sum;
+  10   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     25    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
